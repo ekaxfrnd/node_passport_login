@@ -14,5 +14,8 @@ const {
 
 module.exports = new Sequelize(DB_NAME, DB_USER, DB_PASS, {
     host: SERVER_HOST,
-    dialect: DB_DIALECT
+    dialect: DB_DIALECT,
+    dialectOptions: {
+        timezone: 'Etc/GMT0'
+    }
 })
