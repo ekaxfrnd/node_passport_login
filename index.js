@@ -35,7 +35,7 @@ const hbs = exphbs.create({
 app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
 app.use(flash())
-app.set(express.static('public'))
+app.use(express.static('public'))
 
 app.use(logger('dev'))
 
@@ -49,5 +49,9 @@ const connectDB = async () => {
     }
 }
 connectDB()
+
+app.get('/', (req, res) => res.render('register', {
+    layout: 'auth'
+}))
 
 app.listen(SERVER_PORT, () => console.log(`started on: http://${SERVER_HOST}:${SERVER_PORT}`))
