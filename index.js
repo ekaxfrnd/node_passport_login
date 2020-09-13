@@ -50,8 +50,4 @@ const connectDB = async () => {
 }
 connectDB()
 
-app.get('/', (req, res) => res.render('register', {
-    layout: 'auth'
-}))
-
 app.listen(SERVER_PORT, () => console.log(`started on: http://${SERVER_HOST}:${SERVER_PORT}`))
