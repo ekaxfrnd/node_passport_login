@@ -1,0 +1,34 @@
+{
+  "name": "node_passport_login",
+  "version": "1.0.0",
+  "description": "Authentication using PassportJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekaxfrnd/node_passport_login.git"
+  },
+  "keywords": [
+    "node",
+    "passport"
+  ],
+  "author": "Ekagustimann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekaxfrnd/node_passport_login/issues"
+  },
+  "homepage": "https://github.com/ekaxfrnd/node_passport_login#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mariadb": "^2.4.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5"
+  }
+}
