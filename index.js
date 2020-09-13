@@ -39,4 +39,15 @@ app.set(express.static('public'))
 
 app.use(logger('dev'))
 
+const conn = require('./config/conn')
+const connectDB = async () => {
+    try {
+        await conn.authenticate()
+        console.log('db connected successfully..')
+    } catch (err) {
+        console.log(`db connection error: ${err.message}`)
+    }
+}
+connectDB()
+
 app.listen(SERVER_PORT, () => console.log(`started on: http://${SERVER_HOST}:${SERVER_PORT}`))
