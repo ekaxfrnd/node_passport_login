@@ -1,4 +1,13 @@
 <div class="col-lg-5">
+    {{#if success}}
+    <p class="alert alert-success">{{success}}</p>
+    {{/if}}
+    {{#if fail}}
+    <p class="alert alert-warning">{{fail}}</p>
+    {{/if}}
+    {{#if error}}
+    <p class="alert alert-danger">{{error}}</p>
+    {{/if}}
     <div class="card shadow-lg border-0 rounded-lg mt-5">
         <div class="card-header">
             <h3 class="text-center font-weight-light my-4">Login</h3>
